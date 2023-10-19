@@ -22,11 +22,15 @@ class ControllerAdicionarTarefa():
 
 class ControllerListarTarefa():
     def __init__(self):
-        controllerLista = todo.listarTarefas()
-        cont = 1
-        for tarefas in controllerLista:
-            print(f"{cont} - {tarefas.strip()}")
-            cont += 1
+        try:
+            cont = -1
+            for tarefas in todo.listarTarefas():
+                cont += 1
+                if cont >= 1:
+                    tarefas = tarefas[5:-1]
+                    print(f"{cont} - {tarefas}")
+        except Exception:
+            print("Inválido")
 
 class ControllerExcluirTarefa():
     def __init__(self, excluir):

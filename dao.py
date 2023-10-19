@@ -1,5 +1,7 @@
 from random import randint
 
+
+
 Arquivo = "ToDo.txt"
 ids = []
 
