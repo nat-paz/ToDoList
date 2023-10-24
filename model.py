@@ -1,8 +1,8 @@
 from dao import *
 class ToDo():
-    def adicionarTarefa(self, tarefa):
-        add = DaoAdicionarTarefa()
-        return add.adicionar(tarefa)
+    def adicionarTarefa(self, tarefa ,x):
+        add = DaoAdicionarTarefa(tarefa)
+        return add.adicionar(x)
 
     # def excluirTarefa(self, excluir):
     #     self.lista.pop(excluir)
