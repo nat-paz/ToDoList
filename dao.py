@@ -29,5 +29,11 @@ class DaoListarTarefa():
         return linhas
     
 class DaoAlterar():
-    def alterarTarefa(self):
-        pass
+    def alterarTarefa(self, tarefa_A, nova_tarefa):
+        with open(Arquivo, "r") as arquivo:
+            texto = arquivo.read()
+
+            textoNovo = texto.replace(tarefa_A, nova_tarefa)
+
+            with open(Arquivo, "w") as arquivo:
+                arquivo.write(textoNovo)

@@ -11,5 +11,9 @@ class ToDo():
     def listarTarefas(self):
         listar = DaoListarTarefa()
         return listar.listar()
+    
+    def alterarTarefa(self, tarefa_A, nova_tarefa):
+        alterar = DaoAlterar()
+        return alterar.alterarTarefa(tarefa_A, nova_tarefa)
 
 todo = ToDo()
