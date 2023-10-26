@@ -5,7 +5,7 @@ sair = 0
 while sair == 0:
 
     print("Software de To-Do List")
-    print("[1] Adicionar tarefa \n[2] Listar tarefas \n[3] Excluir tarefa \n[4] Sair")
+    print("[1] Adicionar tarefa \n[2] Listar tarefas\n[3] Alterar tarefa \n[4] Concluir tarefa \n[5] Listar tarefas concluidas \n[6] Excluir tarefa \n[7] Sair")
     menu = input("Informe a opção desejada: ")
     os.system("pause")
     os.system("cls")
@@ -21,8 +21,9 @@ while sair == 0:
             listarTarefa = ControllerListarTarefa()
             os.system("pause")
             os.system("cls")
+
             
-        case "3":
+        case "6":
             listarTarefa = ControllerListarTarefa()
             excluir = input("Qual o indice da tarefa você deseja excluir: ")
             excluirTarefa = ControllerExcluirTarefa(excluir)
@@ -30,7 +31,7 @@ while sair == 0:
             os.system("pause")
             os.system("cls")
 
-        case "4":
+        case "7":
             break
 
         case _:

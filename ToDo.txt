@@ -1,5 +1,5 @@
-ID: 	Tarefa:
-5909	ir ao mercado
-9008	aa
-1761	bb
-1761	bb
+Status: 	ID: 	Tarefa:
+A			9283	a
+B			7570	b
+A			6286	c
+B			4839	d
