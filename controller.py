@@ -39,6 +39,7 @@ class ControllerAdicionarTarefa():
 
 class ControllerListarTarefa():
     def __init__(self):
+        indices = {}
         cont = 0
         if len(todo.listarTarefas()) > 1:
             for tarefas in todo.listarTarefas():
@@ -47,6 +48,8 @@ class ControllerListarTarefa():
                 if tarefasA == "A":
                     cont += 1
                     print(f"{cont} - {tarefas[2]}")
+                    indices[cont] = tarefas[1]
+
                 
 
 class ControllerExcluirTarefa():

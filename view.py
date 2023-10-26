@@ -22,6 +22,15 @@ while sair == 0:
             os.system("pause")
             os.system("cls")
 
+        case "3":
+            print("Essas são suas tarefas:")
+            listarTarefa
+            print("")
+            indice = input("Qual o indice da tarefa que você deseja alterar: ")
+            nova_tarefa = input("Qual será a nova tarefa: ")
+            os.system("pause")
+            os.system("cls")
+
             
         case "6":
             listarTarefa = ControllerListarTarefa()

@@ -28,3 +28,6 @@ class DaoListarTarefa():
             linhas = arquivo.readlines()
         return linhas
     
+class DaoAlterar():
+    def alterarTarefa(self):
+        pass
