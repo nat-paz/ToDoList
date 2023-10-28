@@ -51,25 +51,30 @@ class ControllerListarTarefa():
 
 class ContollerAlterarTarefa():
     def __init__(self, indice, nova_tarefa):
+        self.indice = indice
         self.nova_tarefa = nova_tarefa
         indices = {}
+        indiceInt = int(indice)
 
-        cont = 0
-        if len(todo.listarTarefas()) > 1:
-            for tarefas in todo.listarTarefas():
-                tarefas = tarefas.split()
-                tarefasA = tarefas[0]
-                if tarefasA == "A":
-                    cont += 1
-                    indices[cont] = tarefas[1]
+        if nova_tarefa == "":
+            print("Algo deu errado ao alterar a atrefa. Tente novamente.")
 
-        if indice in indices:
-            for tarefas in todo.listarTarefas():
-                lista_L = tarefas.split()
-                tarefasId = lista_L[1]
-                if tarefasId == indices[indice]:
-                    tarefa_A = tarefas[9:-1]
-                    todo.alterarTarefa(tarefa_A, nova_tarefa)
+        else:
+            cont = 0
+            if len(todo.listarTarefas()) > 1:
+                for tarefas in todo.listarTarefas():
+                    tarefas = tarefas.split()
+                    tarefasA = tarefas[0]
+                    if tarefasA == "A":
+                        cont += 1
+                        indices[cont] = tarefas[2]
+
+            for chave, valor in indices.items():
+                if chave == indiceInt:
+                    if todo.alterarTarefa(valor, nova_tarefa) == True:
+                        print("Tarefa alterada com sucesso!")
+                    else:
+                        print("Algum problema foi encontrado. Tente novamente!")
 
 class ControllerExcluirTarefa():
     def __init__(self, excluir):

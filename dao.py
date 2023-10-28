@@ -16,8 +16,8 @@ class DaoAdicionarTarefa():
                 ler = arquivo.read()
 
             with open(Arquivo, "a") as arquivo:
-                if "Status: \tID: \tTarefa:" not in ler:
-                    arquivo.write(f"Status: \tID: \tTarefa:\n")
+                if "STATUS: \tID: \tTAREFA:" not in ler:
+                    arquivo.write(f"STATUS: \tID: \tTAREFA:\n")
                 arquivo.write(f"{tarefa_formatada}\n")
                 return True
 
@@ -37,3 +37,4 @@ class DaoAlterar():
 
             with open(Arquivo, "w") as arquivo:
                 arquivo.write(textoNovo)
+                return True

@@ -1,5 +1,4 @@
-Status: 	ID: 	Tarefa:
-A			9283	a
-B			7570	b
-A			6286	c
-B			4839	d
+STATUS: 	ID: 	TAREFA:
+A			6212	s
+A			3809	b
+A			2821	c

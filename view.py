@@ -10,7 +10,7 @@ while sair == 0:
     os.system("cls")
 
     match menu:
-        case "1":
+        case "1":      
             tarefa = input("Qual tarefa você deseja adicionar: ")
             adicionarTarefa = ControllerAdicionarTarefa(tarefa)
             os.system("pause")
@@ -28,6 +28,7 @@ while sair == 0:
             indice = input("Qual o indice da tarefa que você deseja alterar: ")
             nova_tarefa = input("Qual será a nova tarefa: ")
             alterar = ContollerAlterarTarefa(indice,nova_tarefa)
+            listarTarefa = ControllerListarTarefa()
             os.system("pause")
             os.system("cls")
 
