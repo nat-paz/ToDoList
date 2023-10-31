@@ -27,19 +27,51 @@ while sair == 0:
             print("")
             indice = input("Qual o indice da tarefa que você deseja alterar: ")
             nova_tarefa = input("Qual será a nova tarefa: ")
+            print("")
             alterar = ContollerAlterarTarefa(indice,nova_tarefa)
             listarTarefa = ControllerListarTarefa()
             os.system("pause")
             os.system("cls")
 
             
-        case "6":
+        case "4":
+            os.system("cls")
+            print ("Concluir tarefas:")
+            print(" ")
+            print ("Sua lista de tarefas:")
+            print(" ")
             listarTarefa = ControllerListarTarefa()
-            excluir = input("Qual o indice da tarefa você deseja excluir: ")
+            print (" ")
+            indiceAlt = input ("Qual a tarefa que deseja concluir? Adicione o índice: ")
+            alterar = ControllerConcluirTarefa(indiceAlt)
+            print(" ")
+            listarTarefa = ControllerListarTarefa()
+            print (" ")
+            os.system("pause")
+
+        case "5":
+            os.system("cls")
+            print ("Lista de tarefas concluídas:")
+            print(" ")
+            listarTarefa = ControllerListarTarefaC()
+            print (" ")
+            os.system("pause")
+
+        case "6":
+            os.system("cls")
+            print ("Excluir tarefas:")
+            print(" ")
+            print ("Lista de tarefas:")
+            print(" ")
+            listarTarefa = ControllerListarTarefa()
+            print(" ")
+            excluir = input ("Qual o índice da tarefa que deseja excluir? ")
             excluirTarefa = ControllerExcluirTarefa(excluir)
+            print(" ")
+            print ("Lista de tarefas:")
+            print(" ")
             listarTarefa = ControllerListarTarefa()
             os.system("pause")
-            os.system("cls")
 
         case "7":
             break

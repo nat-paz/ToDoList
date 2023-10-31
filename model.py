@@ -4,9 +4,6 @@ class ToDo():
         add = DaoAdicionarTarefa(tarefa)
         return add.adicionar(x)
 
-    # def excluirTarefa(self, excluir):
-    #     self.lista.pop(excluir)
-    #     return True
 
     def listarTarefas(self):
         listar = DaoListarTarefa()
@@ -15,5 +12,9 @@ class ToDo():
     def alterarTarefa(self, tarefa_A, nova_tarefa):
         alterar = DaoAlterar()
         return alterar.alterarTarefa(tarefa_A, nova_tarefa)
+    
+    def ConcluirExcluirTarefa(self, statusA, statusN):
+        daoconcluirexcluir = DAO_ConcluirExcluirTarefa()
+        return daoconcluirexcluir.ConcluirExcluirTarefa(statusA, statusN)
 
 todo = ToDo()

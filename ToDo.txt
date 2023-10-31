@@ -1,4 +1,5 @@
-STATUS: 	ID: 	TAREFA:
-A			6212	s
-A			3809	b
-A			2821	c
+STCTUS: 	ID: 	TCREFC:
+C			6212	a
+C			3809	b
+C			2821	c
+C			5234	d
