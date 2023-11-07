@@ -60,8 +60,11 @@ class ContollerAlterarTarefa():
             indices = {}
             indiceInt = int(indice)
 
+            if indiceInt <= 0:
+                print("Tarefa invalida. Tente novamente")
+
             if nova_tarefa == "":
-                print("Algo deu errado ao alterar a atrefa. Tente novamente.")
+                print("Algo deu errado ao alterar a a trefa. Tente novamente.")
 
             else:
                 cont = 0
@@ -82,11 +85,14 @@ class ContollerAlterarTarefa():
 
         except Exception:
                 print("Valor invalido")
-                
+
 class ControllerConcluirTarefa():
     def __init__(self, indiceAlt):
         try:
             indiceint = int(indiceAlt)
+
+            if indiceint <= 0:
+                print("Tarefa invalida. Tente novamente")
 
             if indiceint == "":
                 print ("Falha ao alterar tarefa, tente novamente!")
@@ -133,6 +139,9 @@ class ControllerExcluirTarefa():
         try:
             indiceint = int(indiceAlt)
 
+            if indiceint <= 0:
+                print("Tarefa invalida. Tente novamente")
+
             if indiceint == "":
                 print ("Falha ao alterar tarefa, tente novamente!")
             
@@ -149,7 +158,7 @@ class ControllerExcluirTarefa():
                             tarefasFinal = str(tarefasFinal[0])
                             tarefasAlter = "E" + tarefasFinal[1:]
                             if todo.ConcluirExcluirTarefa(tarefasFinal, tarefasAlter) == True:
-                                print ("Tarefa concluída com sucesso!")
+                                print ("Tarefa excluida com sucesso!")
                             else:
                                 print (" ")
                                 print ("Falha ao concluir tarefa, tente novamente!")

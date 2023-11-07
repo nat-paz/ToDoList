@@ -1,4 +1,4 @@
-STATUS: 	ID: 	TAREFA:
+ETATUS: 	ID: 	TAREFA:
 A			4340	andar
 C			2159	lavar
 A			9871	secar
