@@ -90,19 +90,28 @@ class ControllerConcluirTarefa():
                 cont = 0
                 if len(todo.listarTarefas()) > 1:
                     for tarefas in todo.listarTarefas():
+                        tarefasFinal = tarefas.split("\n")
                         tarefas = tarefas.split()
                         tarefasA = tarefas[0]
                         if "A" == tarefasA:
                             cont +=1
-                            indices[cont] = tarefas[0]
+                        if cont == indiceint:
+                            tarefas[0] = "C"
+                            if todo.ConcluirExcluirTarefa(tarefasFinal, statusN) == True:
+                                print ("Tarefa concluída com sucesso!")
+                            else:
+                                print (" ")
+                                print ("Falha ao concluir tarefa, tente novamente!")
+                            
+                #             indices[cont] = tarefas[0]
 
-                for chave, valor in indices.items():
-                    if chave == indiceint:
-                        if todo.ConcluirExcluirTarefa(valor, statusN) == True:
-                            print ("Tarefa concluída com sucesso!")
-                        else:
-                            print (" ")
-                            print ("Falha ao concluir tarefa, tente novamente!")
+                # for chave, valor in indices.items():
+                #     if chave == indiceint:
+                #         if todo.ConcluirExcluirTarefa(valor, statusN) == True:
+                #             print ("Tarefa concluída com sucesso!")
+                #         else:
+                #             print (" ")
+                #             print ("Falha ao concluir tarefa, tente novamente!")
 
         except Exception:
             print(" ")

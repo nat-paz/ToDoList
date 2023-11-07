@@ -1,3 +1,4 @@
 STATUS: 	ID: 	TAREFA:
 A			3329	a
 A			6096	b
+A			1349	Ir ao mercado
