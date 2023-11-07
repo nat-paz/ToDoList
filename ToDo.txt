@@ -1,4 +1,6 @@
 STATUS: 	ID: 	TAREFA:
-A			3329	a
-A			6096	b
-A			1349	Ir ao mercado
+C			3329	a
+C			6096	b
+C			5346	Ir ao mercado
+C			5160	Passear com o cachorro
+C			5230	Andar de onibus
