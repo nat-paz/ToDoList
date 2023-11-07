@@ -4,3 +4,4 @@ C			6096	b
 C			5346	Ir ao mercado
 C			5160	Passear com o cachorro
 C			5230	Andar de onibus
+A			1162	ir ao mercado

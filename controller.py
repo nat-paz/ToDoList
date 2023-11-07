@@ -42,11 +42,11 @@ class ControllerListarTarefa():
         cont = 0
         if len(todo.listarTarefas()) > 1:
             for tarefas in todo.listarTarefas():
-                tarefas = tarefas.split()
+                tarefas = tarefas.split("\t",7)
                 tarefasA = tarefas[0]
                 if tarefasA == "A":
                     cont += 1
-                    print(f"{cont} - {tarefas[2]}")
+                    print(f"{cont} - {tarefas[4]}")
 
 
 class ContollerAlterarTarefa():
