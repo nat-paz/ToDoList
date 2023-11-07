@@ -39,43 +39,50 @@ class ControllerAdicionarTarefa():
 
 class ControllerListarTarefa():
     def __init__(self):
-        cont = 0
-        if len(todo.listarTarefas()) > 1:
-            for tarefas in todo.listarTarefas():
-                tarefas = tarefas.split("\t",5)
-                tarefasA = tarefas[0]
-                if tarefasA == "A":
-                    cont += 1
-                    print(f"{cont} - {tarefas[4]}")
+        try:
+            cont = 0
+            if len(todo.listarTarefas()) > 1:
+                for tarefas in todo.listarTarefas():
+                    tarefas = tarefas.split("\t",5)
+                    tarefasA = tarefas[0]
+                    if tarefasA == "A":
+                        cont += 1
+                        print(f"{cont} - {tarefas[4]}")
+        except Exception:
+                print("Valor invalido")
 
 
 class ContollerAlterarTarefa():
     def __init__(self, indice, nova_tarefa):
-        self.indice = indice
-        self.nova_tarefa = nova_tarefa
-        indices = {}
-        indiceInt = int(indice)
+        try:
+            self.indice = indice
+            self.nova_tarefa = nova_tarefa
+            indices = {}
+            indiceInt = int(indice)
 
-        if nova_tarefa == "":
-            print("Algo deu errado ao alterar a atrefa. Tente novamente.")
+            if nova_tarefa == "":
+                print("Algo deu errado ao alterar a atrefa. Tente novamente.")
 
-        else:
-            cont = 0
-            if len(todo.listarTarefas()) > 1:
-                for tarefas in todo.listarTarefas():
-                    tarefas = tarefas.split()
-                    tarefasA = tarefas[0]
-                    if tarefasA == "A":
-                        cont += 1
-                        indices[cont] = tarefas[2]
+            else:
+                cont = 0
+                if len(todo.listarTarefas()) > 1:
+                    for tarefas in todo.listarTarefas():
+                        tarefas = tarefas.split()
+                        tarefasA = tarefas[0]
+                        if tarefasA == "A":
+                            cont += 1
+                            indices[cont] = tarefas[2]
 
-            for chave, valor in indices.items():
-                if chave == indiceInt:
-                    if todo.alterarTarefa(valor, nova_tarefa) == True:
-                        print("Tarefa alterada com sucesso!")
-                    else:
-                        print("Algum problema foi encontrado. Tente novamente!")
+                for chave, valor in indices.items():
+                    if chave == indiceInt:
+                        if todo.alterarTarefa(valor, nova_tarefa) == True:
+                            print("Tarefa alterada com sucesso!")
+                        else:
+                            print("Algum problema foi encontrado. Tente novamente!")
 
+        except Exception:
+                print("Valor invalido")
+                
 class ControllerConcluirTarefa():
     def __init__(self, indiceAlt):
         try:
