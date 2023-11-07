@@ -11,18 +11,21 @@ while sair == 0:
     os.system("cls")
 
     match menu:
-        case "1":      
+        case "1": 
+            print ("Adicionar tarefas \n")     
             tarefa = input("Qual tarefa você deseja adicionar: ")
             adicionarTarefa = ControllerAdicionarTarefa(tarefa)
             os.system("pause")
             os.system("cls")
         
         case "2":
+            print ("Listar tarefas \n")
             listarTarefa = ControllerListarTarefa()
             os.system("pause")
             os.system("cls")
 
         case "3":
+            print ("Alterar tarefas \n")
             print("Essas são suas tarefas:")
             listarTarefa = ControllerListarTarefa()
             print("")
@@ -37,10 +40,8 @@ while sair == 0:
             
         case "4":
             os.system("cls")
-            print ("Concluir tarefas:")
-            print(" ")
+            print ("Concluir tarefas \n")
             print ("Sua lista de tarefas:")
-            print(" ")
             listarTarefa = ControllerListarTarefa()
             print (" ")
             indiceAlt = input ("Qual a tarefa que deseja concluir? Adicione o índice: ")
@@ -53,24 +54,20 @@ while sair == 0:
         case "5":
             os.system("cls")
             print ("Lista de tarefas concluídas:")
-            print(" ")
             listarTarefa = ControllerListarTarefaC()
             print (" ")
             os.system("pause")
 
         case "6":
             os.system("cls")
-            print ("Excluir tarefas:")
-            print(" ")
+            print ("Excluir tarefas \n")
             print ("Lista de tarefas:")
-            print(" ")
             listarTarefa = ControllerListarTarefa()
             print(" ")
             excluir = input ("Qual o índice da tarefa que deseja excluir? ")
             excluirTarefa = ControllerExcluirTarefa(excluir)
             print(" ")
             print ("Lista de tarefas:")
-            print(" ")
             listarTarefa = ControllerListarTarefa()
             os.system("pause")
 

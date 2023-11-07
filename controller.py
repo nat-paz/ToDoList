@@ -42,7 +42,7 @@ class ControllerListarTarefa():
         cont = 0
         if len(todo.listarTarefas()) > 1:
             for tarefas in todo.listarTarefas():
-                tarefas = tarefas.split("\t",7)
+                tarefas = tarefas.split("\t",5)
                 tarefasA = tarefas[0]
                 if tarefasA == "A":
                     cont += 1
@@ -112,11 +112,12 @@ class ControllerListarTarefaC():
             cont = 0
             if len(todo.listarTarefas()) > 1:
                 for tarefas in todo.listarTarefas():
-                    tarefas = tarefas.split()
-                    tarefasC = tarefas[0]
-                    if "C" == tarefasC:
-                        cont +=1
-                        print(f"{cont} - {tarefas[2]}")
+                    tarefas = tarefas.split("\t",5)
+                    tarefasA = tarefas[0]
+                    if tarefasA == "C":
+                        cont += 1
+                        print(f"{cont} - {tarefas[4]}")
+
         except Exception:
             print ("Nenhuma tarefa foi concluída")
 
