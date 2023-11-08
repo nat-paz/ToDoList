@@ -29,23 +29,13 @@ class DaoListarTarefa():
         return linhas
     
 class DaoAlterar():
-    def alterarTarefa(self, tarefa_A, nova_tarefa):
+    def alterarTarefa(self, antigo, novo):
         with open(Arquivo, "r") as arquivo:
             texto = arquivo.read()
 
-            textoNovo = texto.replace(tarefa_A, nova_tarefa)
+            textoNovo = texto.replace(antigo, novo)
 
             with open(Arquivo, "w") as arquivo:
                 arquivo.write(textoNovo)
                 return True
             
-class DAO_ConcluirExcluirTarefa:
-    def ConcluirExcluirTarefa(self, statusA, statusN):
-        with open(Arquivo, "r") as arquivo:
-            status = arquivo.read()
-
-        statusNovo = status.replace(statusA, statusN)
-
-        with open(Arquivo, "w") as arquivo:
-            arquivo.write(statusNovo)
-            return True

@@ -9,12 +9,12 @@ class ToDo():
         listar = DaoListarTarefa()
         return listar.listar()
     
-    def alterarTarefa(self, tarefa_A, nova_tarefa):
+    def alterarTarefa(self, antigo, novo):
         alterar = DaoAlterar()
-        return alterar.alterarTarefa(tarefa_A, nova_tarefa)
+        return alterar.alterarTarefa(antigo, novo)
     
-    def ConcluirExcluirTarefa(self, statusA, statusN):
-        daoconcluirexcluir = DAO_ConcluirExcluirTarefa()
-        return daoconcluirexcluir.ConcluirExcluirTarefa(statusA, statusN)
+    def ConcluirExcluirTarefa(self, antigo, novo):
+        daoconcluirexcluir = DaoAlterar()
+        return daoconcluirexcluir.alterarTarefa(antigo, novo)
 
 todo = ToDo()

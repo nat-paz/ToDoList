@@ -1,5 +1,5 @@
 ETATUS: 	ID: 	TAREFA:
-A			4340	andar
+C			4340	andar
 C			2159	lavar
-A			9871	secar
+E			9871	secar
 E			1756	pescar
